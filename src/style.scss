@@ -1,0 +1,498 @@
+// IMPORTS
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+
+// COLORS
+$desaturated-dark-cyan: hsl(180, 29%, 50%);
+$light-grayish-cyan-background: hsl(180, 52%, 96%);
+$light-grayish-cyan-filter-tablets: hsl(180, 31%, 95%);
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+//  TYPOGRAPHY
+
+$font-family: "League Spartan", sans-serif;
+$font-size: 15px;
+$font-weight1: 500;
+$font-weight2: 700;
+
+// STYLES
+html,
+body,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $light-grayish-cyan-background;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+// SEARCH COMPONENT
+.search {
+  height: 15vh;
+  background-color: $desaturated-dark-cyan;
+  background-image: url("../public/images/bg-header-desktop.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  position: relative;
+
+  @media only screen and (max-width: 724px) {
+    height: 20vh;
+  }
+
+  // SEARCH CONTAINER
+  .search-container {
+    width: 70%;
+    padding: 0.5rem 2rem 1.5rem;
+    background: white;
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 8px 19px -10px rgba(91, 164, 164, 0.75);
+    -webkit-box-shadow: 0px 8px 19px -10px rgba(91, 164, 164, 0.75);
+    -moz-box-shadow: 0px 8px 19px -10px rgba(91, 164, 164, 0.75);
+
+    @media only screen and (max-width: 1200px) {
+      left: 12.5%;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      top: 70%;
+      width: 80%;
+      left: 7.5%;
+    }
+
+    @media only screen and (max-width: 724px) {
+      width: 85%;
+      top: 75%;
+      left: 2.5%;
+      height: 5rem;
+      align-items: flex-start;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 80%;
+      left: 4%;
+    }
+
+    @media only screen and (max-width: 480px) {
+      width: 75%;
+      left: 6%;
+    }
+
+    @media only screen and (max-width: 360px) {
+      width: 70%;
+      left: 6%;
+    }
+  }
+
+  // SEARCH AND CHIPS CONTAINER
+  // .search-chip-container {
+  // flex: 2;
+  // display: inline-flex;
+  // }
+
+  // search-chips
+  .searchChips {
+    display: inline-flex;
+    flex-wrap: wrap;
+    // border: solid;
+    // width: 90%;
+    justify-content: space-between;
+    // align-items: center;
+    margin-right: 1rem;
+  }
+
+  // input
+  #text {
+    border: 0;
+    outline: 0;
+    // display: inline;
+    caret-color: $desaturated-dark-cyan;
+    padding: 0.2rem 0.5rem;
+    min-width: 2rem;
+    max-width: 6rem;
+    margin-top: 0.8rem;
+    color: $desaturated-dark-cyan;
+    font-weight: $font-weight2;
+
+    &::placeholder {
+      color: $desaturated-dark-cyan;
+      font-size: 1rem;
+    }
+  }
+
+  .clear {
+    // float: right;
+    // border: solid;
+    // width: 10%;
+    // clear: left;
+    // height: 40%;
+    display: inline-block;
+    // height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 0;
+    margin-top: 0.8rem;
+    cursor: pointer;
+    font-weight: $font-weight2;
+    transition: all 0.5s;
+
+    @media only screen and (max-width: 724px) {
+      margin-top: 2.5rem;
+    }
+
+    &:hover {
+      color: $desaturated-dark-cyan;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    // &::after {
+    //   content: "";
+    //   clear: both;
+    //   display: table;
+    // }
+  }
+}
+
+// SEARCH CHIP
+.search-chip {
+  display: inline-flex;
+  // border: solid;
+  align-items: center;
+  background: $light-grayish-cyan-filter-tablets;
+  padding: 0;
+  width: fit-content;
+  border-radius: 0.2rem;
+  margin-right: 1rem;
+  margin-top: 0.8rem;
+  font-weight: $font-weight2;
+
+  .chip-data {
+    color: $desaturated-dark-cyan;
+    padding: 0.4rem;
+    font-size: $font-size;
+    // margin: 0;
+    // width: 100%;
+  }
+
+  .chip-close {
+    background: $desaturated-dark-cyan;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      cursor: pointer;
+      background: $very-dark-grayish-cyan;
+    }
+  }
+}
+
+// SEARCH FINISHED/////////////
+
+// CARDS COMPONENT
+.cards {
+  margin: 4.5rem 6rem;
+
+  @media only screen and (max-width: 724px) {
+    margin: 9rem 4rem;
+  }
+
+  @media only screen and (max-width: 480) {
+    margin: 9rem 4rem;
+  }
+
+  @media only screen and (max-width: 480px) {
+    margin: 9rem 2rem;
+  }
+
+  @media only screen and (max-width: 360px) {
+    margin: 9rem 1rem;
+  }
+
+  // @media only screen and (max-width: 1024px) {
+  //   margin: 3rem;
+  // }
+
+  // @media only screen and (max-width: 930px) {
+  //   margin: 3rem 1rem;
+  // }
+}
+
+// CARD FINISHED //////////
+
+// CARD COMPONENT
+.card-featured {
+  // outline-style: solid;
+  // outline-width: 0 0 0 0.2rem;
+  // outline-color: $desaturated-dark-cyan;
+  border-left: solid 0.3rem $desaturated-dark-cyan;
+}
+.card {
+  background-color: white;
+  padding: 2rem 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // border: solid 1px;
+  margin-bottom: 1.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 0px 8px 19px -10px rgba(91, 164, 164, 0.75);
+  -webkit-box-shadow: 0px 8px 19px -10px rgba(91, 164, 164, 0.75);
+  -moz-box-shadow: 0px 8px 19px -10px rgba(91, 164, 164, 0.75);
+
+  @media only screen and (max-width: 850px) {
+    padding: 1rem;
+  }
+
+  @media only screen and (max-width: 724px) {
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    align-items: stretch;
+    position: relative;
+    padding: 2.5rem 0.5rem 0.5rem;
+  }
+
+  // INFO CONTAINER
+  .info-container {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    // border: solid 1px;
+    flex: 1;
+
+    @media only screen and (max-width: 724px) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .logo {
+      // flex: 1;
+      // @media only screen and (min-width: 725px) {
+      //   width: 4rem;
+      //   height: 4rem;
+      // }
+
+      // @media only screen and (min-width: 900px) {
+      //   width: 5rem;
+      //   height: 5rem;
+      // }
+
+      // @media only screen and (min-width: 1200px) {
+      //   width: 6rem;
+      //   height: 6rem;
+      // }
+      min-width: 5rem;
+
+      @media only screen and (max-width: 724px) {
+        min-width: 0;
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        top: -1.5rem;
+        left: 1rem;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  // INFO START
+  .info {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    // align-items: flex-start;
+    margin-left: 1.5rem;
+    margin-bottom: 0.3rem;
+    // border: solid 1px;
+    // align-items: stretch;
+    font-size: $font-size;
+    font-weight: $font-weight1;
+
+    // .top,
+    // .mid,
+    // .bottom {
+    //   display: flex;
+    // }
+    @media only screen and (max-width: 724px) {
+      margin-left: 0;
+      border-bottom: solid 1px $dark-grayish-cyan;
+    }
+
+    // top
+    .top {
+      display: flex;
+      // justify-content: space-between;
+      align-items: center;
+
+      .company {
+        font-weight: $font-weight2;
+        color: $desaturated-dark-cyan;
+      }
+    }
+    // middle
+    .mid {
+      font-weight: $font-weight2;
+      margin: 0.8rem 0;
+      font-size: 1.2rem;
+      transition: all 0.5s;
+
+      // justify-content: flex-start;
+
+      &:hover {
+        cursor: pointer;
+        color: $desaturated-dark-cyan;
+      }
+    }
+
+    // bottom
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      color: $dark-grayish-cyan;
+      // align-items: center;
+
+      @media only screen and (max-width: 950px) {
+        flex-wrap: wrap;
+
+        div {
+          margin-bottom: 1rem;
+          align-items: center;
+        }
+      }
+
+      @media only screen and (max-width: 724px) {
+        margin-right: 20%;
+      }
+
+      .extra::after {
+        content: "";
+        background-color: $dark-grayish-cyan;
+        border-radius: 50%;
+        width: fit-content;
+        // height: fit-content;
+        padding: 1.5px;
+        float: right;
+        margin: 0.4rem 1rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: 724px) {
+          margin: 0.4rem 0.6rem 0;
+        }
+      }
+    }
+  }
+  // INFO FINISHED
+
+  // SKILLS START
+  .skills {
+    flex: 0.5;
+    display: flex;
+    justify-content: space-between;
+    // margin-left: 8rem;
+    // border: solid 1px;
+
+    @media only screen and (max-width: 1300px) {
+      flex: 0.85;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      flex: 1;
+      flex-wrap: wrap;
+      margin-left: 1rem;
+      align-items: center;
+    }
+
+    @media only screen and (max-width: 724px) {
+      margin: 1rem 12% 0 0;
+      justify-content: flex-start;
+    }
+
+    // @media only screen and (max-width: 768px) {}
+  }
+  // SKILLS FINISHED
+}
+
+// CHIPS COMPONENT
+.my-chip {
+  // padding: 0;
+  // width: fit-content;
+  // height: fit-content;
+  height: fit-content;
+  border-radius: 1rem;
+  // position: relative;
+  vertical-align: middle;
+  padding: 0.4rem 0.6rem 0.4rem;
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // line-height: 1;
+  // background: blue;
+
+  // div {
+  //   margin: 0;
+  //   padding: 0.6rem;
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 0;
+  //   -ms-transform: translateY(-50%);
+  //   transform: translateY(-50%);
+  // }
+}
+
+// chip variations
+.new {
+  color: white;
+  background: $desaturated-dark-cyan;
+  margin: 0 0.5rem 0 0.8rem;
+}
+
+.featured {
+  color: white;
+  background: black;
+}
+
+.skill {
+  background: $light-grayish-cyan-background;
+  color: $desaturated-dark-cyan;
+  border-radius: 0.3rem;
+  padding: 0.6rem;
+  transition: all 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    color: $light-grayish-cyan-background;
+    background: $desaturated-dark-cyan;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 1rem;
+  }
+
+  @media only screen and (max-width: 724px) {
+    margin-right: 0.7rem;
+  }
+}
+// CHIPS FINISHED
+// CARD FINISHED///////////
