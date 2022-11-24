@@ -95,28 +95,18 @@ body {
     }
   }
 
-  // SEARCH AND CHIPS CONTAINER
-  // .search-chip-container {
-  // flex: 2;
-  // display: inline-flex;
-  // }
-
   // search-chips
   .searchChips {
     display: inline-flex;
     flex-wrap: wrap;
-    // border: solid;
-    // width: 90%;
     justify-content: space-between;
-    // align-items: center;
     margin-right: 1rem;
   }
-
+  // }
   // input
   #text {
     border: 0;
     outline: 0;
-    // display: inline;
     caret-color: $desaturated-dark-cyan;
     padding: 0.2rem 0.5rem;
     min-width: 2rem;
@@ -132,13 +122,7 @@ body {
   }
 
   .clear {
-    // float: right;
-    // border: solid;
-    // width: 10%;
-    // clear: left;
-    // height: 40%;
     display: inline-block;
-    // height: 100%;
     display: flex;
     align-items: center;
     margin-left: 2rem;
@@ -157,19 +141,12 @@ body {
       text-decoration: underline;
       cursor: pointer;
     }
-
-    // &::after {
-    //   content: "";
-    //   clear: both;
-    //   display: table;
-    // }
   }
 }
 
 // SEARCH CHIP
 .search-chip {
   display: inline-flex;
-  // border: solid;
   align-items: center;
   background: $light-grayish-cyan-filter-tablets;
   padding: 0;
@@ -183,8 +160,6 @@ body {
     color: $desaturated-dark-cyan;
     padding: 0.4rem;
     font-size: $font-size;
-    // margin: 0;
-    // width: 100%;
   }
 
   .chip-close {
@@ -202,9 +177,9 @@ body {
   }
 }
 
-// SEARCH FINISHED/////////////
+// // SEARCH FINISHED/////////////
 
-// CARDS COMPONENT
+// // CARDS COMPONENT
 .cards {
   margin: 4.5rem 6rem;
 
@@ -223,23 +198,12 @@ body {
   @media only screen and (max-width: 360px) {
     margin: 9rem 1rem;
   }
-
-  // @media only screen and (max-width: 1024px) {
-  //   margin: 3rem;
-  // }
-
-  // @media only screen and (max-width: 930px) {
-  //   margin: 3rem 1rem;
-  // }
 }
 
 // CARD FINISHED //////////
 
 // CARD COMPONENT
 .card-featured {
-  // outline-style: solid;
-  // outline-width: 0 0 0 0.2rem;
-  // outline-color: $desaturated-dark-cyan;
   border-left: solid 0.3rem $desaturated-dark-cyan;
 }
 .card {
@@ -248,7 +212,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // border: solid 1px;
   margin-bottom: 1.5rem;
   border-radius: 0.3rem;
   box-shadow: 0px 8px 19px -10px rgba(91, 164, 164, 0.75);
@@ -270,9 +233,7 @@ body {
   // INFO CONTAINER
   .info-container {
     display: flex;
-    // justify-content: space-between;
     align-items: center;
-    // border: solid 1px;
     flex: 1;
 
     @media only screen and (max-width: 724px) {
@@ -282,21 +243,6 @@ body {
     }
 
     .logo {
-      // flex: 1;
-      // @media only screen and (min-width: 725px) {
-      //   width: 4rem;
-      //   height: 4rem;
-      // }
-
-      // @media only screen and (min-width: 900px) {
-      //   width: 5rem;
-      //   height: 5rem;
-      // }
-
-      // @media only screen and (min-width: 1200px) {
-      //   width: 6rem;
-      //   height: 6rem;
-      // }
       min-width: 5rem;
 
       @media only screen and (max-width: 724px) {
@@ -318,20 +264,11 @@ body {
   .info {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
-    // align-items: flex-start;
     margin-left: 1.5rem;
     margin-bottom: 0.3rem;
-    // border: solid 1px;
-    // align-items: stretch;
     font-size: $font-size;
     font-weight: $font-weight1;
 
-    // .top,
-    // .mid,
-    // .bottom {
-    //   display: flex;
-    // }
     @media only screen and (max-width: 724px) {
       margin-left: 0;
       border-bottom: solid 1px $dark-grayish-cyan;
@@ -340,7 +277,6 @@ body {
     // top
     .top {
       display: flex;
-      // justify-content: space-between;
       align-items: center;
 
       .company {
@@ -355,8 +291,6 @@ body {
       font-size: 1.2rem;
       transition: all 0.5s;
 
-      // justify-content: flex-start;
-
       &:hover {
         cursor: pointer;
         color: $desaturated-dark-cyan;
@@ -368,7 +302,6 @@ body {
       display: flex;
       justify-content: space-between;
       color: $dark-grayish-cyan;
-      // align-items: center;
 
       @media only screen and (max-width: 950px) {
         flex-wrap: wrap;
@@ -388,7 +321,6 @@ body {
         background-color: $dark-grayish-cyan;
         border-radius: 50%;
         width: fit-content;
-        // height: fit-content;
         padding: 1.5px;
         float: right;
         margin: 0.4rem 1rem 0;
@@ -409,8 +341,6 @@ body {
     flex: 0.5;
     display: flex;
     justify-content: space-between;
-    // margin-left: 8rem;
-    // border: solid 1px;
 
     @media only screen and (max-width: 1300px) {
       flex: 0.85;
@@ -427,38 +357,16 @@ body {
       margin: 1rem 12% 0 0;
       justify-content: flex-start;
     }
-
-    // @media only screen and (max-width: 768px) {}
   }
   // SKILLS FINISHED
 }
 
 // CHIPS COMPONENT
 .my-chip {
-  // padding: 0;
-  // width: fit-content;
-  // height: fit-content;
   height: fit-content;
   border-radius: 1rem;
-  // position: relative;
   vertical-align: middle;
   padding: 0.4rem 0.6rem 0.4rem;
-
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // line-height: 1;
-  // background: blue;
-
-  // div {
-  //   margin: 0;
-  //   padding: 0.6rem;
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 0;
-  //   -ms-transform: translateY(-50%);
-  //   transform: translateY(-50%);
-  // }
 }
 
 // chip variations

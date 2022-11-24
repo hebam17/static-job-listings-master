@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import Skills from "./Skills";
 
 const Card = ({ card }) => {
-  // console.log(card.logo);
+
   return (
     <div className={`card ${card.featured && "card-featured"}`}>
       <div className="info-container">

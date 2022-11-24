@@ -14,8 +14,6 @@ const Search = ({ users, setUsers }) => {
 
   // filter users
   const filterChips = (filterList) => {
-    // console.log("filterList:", filterList);
-
     let filteredUsers = users.filter((user) => {
       let { role, level, languages, tools, location, contract, position } =
         user;
@@ -31,15 +29,13 @@ const Search = ({ users, setUsers }) => {
       ];
       filters = filters.map((elem) => elem.toLowerCase());
 
-      // console.log(filters);
       let bool = chipDataList.map((chipFilter) => filters.includes(chipFilter));
 
       if (!bool.includes(false)) {
         return true;
       }
-      // console.log("bool:", bool);
     });
-    // console.log("filteredUsers:", filteredUsers);
+
     setUsers(filteredUsers);
   };
 
@@ -74,7 +70,6 @@ const Search = ({ users, setUsers }) => {
   return (
     <div className="search">
       <div className="search-container" onClick={handleFocus}>
-        {/* <div style={{ margin: 0, padding: 0 }}> */}
         <div className="searchChips">
           {chipDataList.map((elem) => (
             <SearchShip chip={elem} key={elem} handleClose={handleClose} />
@@ -95,7 +90,6 @@ const Search = ({ users, setUsers }) => {
           />
         </div>
 
-        {/* </div> */}
         <div className="clear" onClick={handleClear}>
           Clear
         </div>

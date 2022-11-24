@@ -3,7 +3,6 @@ import Chip from "./Chip";
 
 const Skills = ({ card }) => {
   const { role, level, languages, tools } = card;
-  // console.log(card.role);
   return (
     <div className="skills">
       <Chip myClass="skill" data={role} />
